@@ -1,0 +1,15 @@
+[Unit]
+Description=Run Node-Reaper when service stops
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStop=/bin/bash /tmp/certname-replace.sh ; /bin/bash /tmp/bolt-nodripa.sh
+StandardOutput=tty
+User=root
+TimeoutSec=60
+
+[Install]
+WantedBy=multi-user.target
