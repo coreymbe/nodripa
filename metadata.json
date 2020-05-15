@@ -1,0 +1,34 @@
+{
+  "name": "coreymbe-nodripa",
+  "version": "1.0",
+  "author": "coreymbe",
+  "summary": "Installs, configures, and manages the Node Reaper service.",
+  "license": "Apache-2.0",
+  "source": "",
+  "dependencies": [
+    { "name":"puppetlabs/yumrepo_core"}
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "7",
+        "8"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.10.0 < 7.0.0"
+    }
+  ],
+  "description": "Node Reaper module for CentOS and RHEL to auto purge node on scale-in."
+}
