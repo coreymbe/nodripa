@@ -6,7 +6,7 @@ Wants=network-online.target
 [Service]
 Type=oneshot
 RemainAfterExit=true
-ExecStop=/bin/bash /tmp/certname-replace.sh ; /bin/bash /tmp/bolt-nodripa.sh
+ExecStop=/bin/bash /tmp/certname-replace.sh ; /bin/bash /tmp/bolt-nodripa.sh ; puppet cert clean
 StandardOutput=tty
 User=root
 TimeoutSec=60
