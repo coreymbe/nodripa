@@ -8,7 +8,7 @@
 class nodripa::install {
 
   file { '/tmp/puppet-bolt.rpm':
-    source => ["https://yum.puppet.com/puppet-tools/el/7/x86_64/puppet-bolt-2.9.0-1.el7.x86_64.rpm"],
+    source => ["http://yum.puppet.com/puppet-tools/el/7/x86_64/puppet-bolt-2.9.0-1.el7.x86_64.rpm"],
     ensure => present,
     before => Package['puppet-bolt'],
   }
