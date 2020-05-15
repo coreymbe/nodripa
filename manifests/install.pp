@@ -7,15 +7,17 @@
 
 class nodripa::install {
 
-  file { '/tmp/puppet-bolt.rpm':
-    source => ["http://yum.puppet.com/puppet-tools/el/7/x86_64/puppet-bolt-2.9.0-1.el7.x86_64.rpm"],
+  yumrepo { 'puppet-tools':
+    name => "puppet-tools",
     ensure => present,
+    baseurl => "http://yum.puppet.com/puppet-tools/el/${facts['os']['release']['major']}/\$basearch",
+    enabled => '1',
+    gpgcheck => '0',
     before => Package['puppet-bolt'],
   }
   package { 'puppet-bolt':
     ensure => 'installed',
-    provider => rpm,
-    source => ["/tmp/puppet-bolt.rpm"],
+    provider => yum,
   }
   file {'/tmp/certname-replace.sh':
     ensure => present,
