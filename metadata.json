@@ -7,6 +7,7 @@
   "source": "",
   "dependencies": [
     { "name":"puppetlabs/yumrepo_core"}
+    { "name":"puppetlabs/apt"}
   ],
   "operatingsystem_support": [
     {
@@ -22,6 +23,13 @@
         "7",
         "8"
       ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "16.04",
+        "18.04"
+      ]
     }
   ],
   "requirements": [
@@ -30,5 +38,5 @@
       "version_requirement": ">= 4.10.0 < 7.0.0"
     }
   ],
-  "description": "Node Reaper module for CentOS and RHEL to auto purge node on scale-in."
+  "description": "Node Reaper module for CentOS, RHEL and Ubuntu to auto purge node on scale-in."
 }
