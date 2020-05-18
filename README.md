@@ -36,4 +36,5 @@ node 'agent.example.com' {
 For bolt to execute the `puppet node purge` command an ssh-key will need to be configured.
 
 ##### ssh_key
+
 `String`: Private `ssh_key`
