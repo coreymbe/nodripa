@@ -5,7 +5,7 @@
 # @example
 #   include nodripa::install
 
-class nodripa::install {
+class nodripa::rhel {
 
   yumrepo { 'puppet-tools':
     name => "puppet-tools",
