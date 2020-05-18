@@ -3,7 +3,7 @@
 # A description of what this class does
 #
 # @example
-#   include nodripa::install
+#   include nodripa::rhel
 
 class nodripa::rhel {
 
