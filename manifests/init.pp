@@ -8,5 +8,19 @@
 class nodripa (
   String $ssh_key
 ){
-  include nodripa::install
+
+  case $facts['os']['name'] {
+      'RedHat', 'CentOS':  {
+           include nodripa::rhel
+           include yumrepo_core
+      }
+      /^(Debian|Ubuntu)$/:  {
+           include nodripa::debian
+           include apt  
+      }
+      Default:  {
+           include nodripa::rhel
+           include yumrepo_core 
+      }
+  }
 }
