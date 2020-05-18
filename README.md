@@ -21,10 +21,10 @@ Install this module with the following command:
 puppet module install coreymbe-nodripa
 ```
 
-To activate this module, classify your Master with the `nodripa` class using your preferred classification method. Below is an example using `site.pp`.
+To activate this module, classify your agent node with the `nodripa` class using your preferred classification method. Below is an example using `site.pp`.
 
 ```puppet
-node 'master.example.com' {
+node 'agent.example.com' {
   include nodripa
 }
 ```
