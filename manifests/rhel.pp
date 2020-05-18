@@ -21,7 +21,7 @@ class nodripa::rhel {
   }
   file {'/tmp/certname-replace.sh':
     ensure => present,
-    source => ["puppet:///modules/nodripa/certname-replace.sh"],
+    source => ["puppet:///modules/nodripa/rhel-certname-replace.sh"],
     mode => '0744',
     before => Service['nodripa'],
   }
