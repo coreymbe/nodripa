@@ -1,0 +1,3 @@
+#!/bin/bash
+mom_certname=$(/opt/puppetlabs/bin/puppet config print server --section main)
+/opt/puppetlabs/bin/bolt command run 'sudo /opt/puppetlabs/bin/puppet node purge localcert' --targets $mom_certname --tty --user <%= $nodripa::bolt_user %> --no-host-key-check --private-key <%= $nodripa::ssh_key %>
