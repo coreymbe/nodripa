@@ -33,14 +33,15 @@ node 'agent.example.com' {
 
 ##### Parameters
 
-**ssh_key**
 
-`String`: `/path/to/privatekey.pem`
-  * Default: `/root/.ssh/nodripa_rsa`
-  
 **private_key**
 
 `String`: Private `ssh-key`
+
+**ssh_key**
+
+`String`: `/path/to/privatekey.pem`
+  * Default: `/root/.ssh/nodripa_rsa`  
 
 **bolt_user**
 
