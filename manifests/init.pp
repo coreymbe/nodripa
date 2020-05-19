@@ -1,22 +1,19 @@
-# @summary A short summary of the purpose of this class
-#
-# A description of what this class does
-#
 # @example
 #   include nodripa
 
 class nodripa (
-  String $ssh_key
+  String $ssh_key,
+  String $bolt_user,
+  String $private_key,
 ){
-
   case $facts['os']['name'] {
       'RedHat', 'CentOS':  {
            include nodripa::rhel
       }
-      /^(Debian|Ubuntu)$/:  {
-           include nodripa::debian
+      'Debian', 'Ubuntu':  {
+           include nodripa::ubuntu
       }
-      Default:  {
+      default:  {
            include nodripa::rhel
       }
   }
