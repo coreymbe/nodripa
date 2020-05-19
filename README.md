@@ -31,10 +31,20 @@ node 'agent.example.com' {
 
 #### Configuration
 
-**Parameters**
+##### Parameters
 
 For bolt to execute the `puppet node purge` command an ssh-key will need to be configured.
 
-##### ssh_key
+**ssh_key**
 
-`String`: Private `ssh_key`
+`String`: `/path/to/privatekey.pem`
+  * Default: `/root/.ssh/nodripa_rsa`
+  
+**private_key**
+
+`String`: Private `ssh-key`
+
+**bolt_user**
+
+`String`: User to execute `puppet node purge` command.
+  * Default: `root`
