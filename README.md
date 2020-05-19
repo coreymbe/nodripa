@@ -33,8 +33,6 @@ node 'agent.example.com' {
 
 ##### Parameters
 
-For bolt to execute the `puppet node purge` command an ssh-key will need to be configured.
-
 **ssh_key**
 
 `String`: `/path/to/privatekey.pem`
@@ -48,3 +46,8 @@ For bolt to execute the `puppet node purge` command an ssh-key will need to be c
 
 `String`: User to execute `puppet node purge` command.
   * Default: `root`
+
+#### Limitations
+
+* For bolt to execute the `puppet node purge` command an ssh-key will need to be configured.
+* If utilizing this module on AWS instances, the ssh-key needs to be in `.pem` format.
