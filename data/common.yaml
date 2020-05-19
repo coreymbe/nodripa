@@ -1,0 +1,3 @@
+---
+nodripa::ssh_key: '/root/.ssh/nodripa_rsa'
+nodripa::bolt_user: 'root'
