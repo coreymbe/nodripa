@@ -26,6 +26,12 @@ class nodripa::ubuntu {
     mode           => '0744',
     before         => Service['nodripa'],
   }
+  file {'/tmp/pe-version_ssl-clean.sh':
+    ensure         => present,
+    source         => ['puppet:///modules/nodripa/pe-version_ssl-clean.sh'],
+    mode           => '0744',
+    before         => Service['nodripa'],
+  }
   file { $nodripa::ssh_key:
     ensure         => present,
     content        => $nodripa::private_key,
