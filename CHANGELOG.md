@@ -7,7 +7,3 @@ All notable changes to this project will be documented in this file.
 **Features**
 
 Added support for Bolt pcp transport.
-
-**Bugfixes**
-
-**Known Issues**
