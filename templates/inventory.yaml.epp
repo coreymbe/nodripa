@@ -1,0 +1,4 @@
+config:
+    transport: pcp
+    pcp:
+      service-url: <%= $nodripa::master_url %>
