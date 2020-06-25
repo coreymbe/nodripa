@@ -5,6 +5,10 @@ class nodripa (
   String $ssh_key,
   String $bolt_user,
   String $private_key,
+  String $bolt_transport,
+  String $master_url,
+  String $access_token,
+  String $bolt_path,
 ){
   case $facts['os']['name'] {
       'RedHat', 'CentOS':  {

@@ -1,3 +1,6 @@
 ---
 nodripa::ssh_key: '/root/.ssh/nodripa_rsa'
 nodripa::bolt_user: 'root'
+nodripa::bolt_transport: 'ssh'
+nodripa::private_key: 'undef'
+nodripa::bolt_path: 'bolt'
