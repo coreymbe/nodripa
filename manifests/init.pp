@@ -8,6 +8,7 @@ class nodripa (
   String $bolt_transport,
   String $master_url,
   String $access_token,
+  String $bolt_path,
 ){
   case $facts['os']['name'] {
       'RedHat', 'CentOS':  {
