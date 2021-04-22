@@ -12,13 +12,13 @@ class nodripa (
 ){
   case $facts['os']['name'] {
       'RedHat', 'CentOS':  {
-           include nodripa::rhel
+        include nodripa::rhel
       }
       'Debian', 'Ubuntu':  {
-           include nodripa::ubuntu
+        include nodripa::ubuntu
       }
       default:  {
-           include nodripa::rhel
+        include nodripa::rhel
       }
   }
 }
