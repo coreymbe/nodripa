@@ -1,24 +1,16 @@
+# @summary A short summary of the purpose of this class
+#
+# A description of what this class does
+#
 # @example
 #   include nodripa
-
 class nodripa (
-  String $ssh_key,
-  String $bolt_user,
-  String $private_key,
-  String $bolt_transport,
-  String $master_url,
-  String $access_token,
-  String $bolt_path,
-){
-  case $facts['os']['name'] {
-      'RedHat', 'CentOS':  {
-        include nodripa::rhel
-      }
-      'Debian', 'Ubuntu':  {
-        include nodripa::ubuntu
-      }
-      default:  {
-        include nodripa::rhel
-      }
-  }
+  String $pe_console   = $settings::server,
+  String $certname     = $trusted['certname'],
+  String $ssl_dir      = "${settings::confdir}/ssl",
+  String $vault_server = $settings::server,
+  String $vault_token  = undef
+) {
+  include nodripa::config
+  include nodripa::service
 }

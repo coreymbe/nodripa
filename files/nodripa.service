@@ -1,13 +1,13 @@
 [Unit]
-Description=Run Node-Reaper when service stops
+Description=Node Reaper Service
 After=network-online.target
 Wants=network-online.target
 
 [Service]
 Type=oneshot
 RemainAfterExit=true
-ExecStop=/bin/bash /tmp/certname-replace.sh ; /bin/bash /tmp/bolt-nodripa.sh ; /bin/bash /tmp/pe-version_ssl-clean.sh
-StandardOutput=tty
+ExecStart=/etc/puppetlabs/puppet/nodripa/reaper/nodripa_start.rb
+ExecStop=/etc/puppetlabs/puppet/nodripa/reaper/nodripa_stop.rb
 User=root
 TimeoutSec=60
 

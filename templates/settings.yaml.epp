@@ -1,0 +1,8 @@
+# managed by the nodripa module
+---
+"certname" : "<%= $nodripa::certname %>"
+"pe_console" : "<%= $nodripa::pe_console %>"
+"log" : "<%= $settings::confdir %>/nodripa/log/reaper.log"
+"ssl_dir" : "<%= $nodripa::ssl_dir %>"
+"vault_server" : "<%= $nodripa::vault_server %>"
+"vault_token" : "<%= $nodripa::vault_token %>"
